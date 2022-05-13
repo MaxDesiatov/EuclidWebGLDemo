@@ -1,0 +1,32 @@
+{
+  "pins" : [
+    {
+      "identity" : "euclid",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/nicklockwood/Euclid.git",
+      "state" : {
+        "branch" : "develop",
+        "revision" : "592813da27d87eff46b0c09e337942d177893d24"
+      }
+    },
+    {
+      "identity" : "javascriptkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftwasm/JavaScriptKit.git",
+      "state" : {
+        "branch" : "maxd/optional-constructor",
+        "revision" : "11c6898f855ce91044c26d28baf0089ecf2698d8"
+      }
+    },
+    {
+      "identity" : "webapikit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftwasm/WebAPIKit.git",
+      "state" : {
+        "branch" : "maxd/optional-constructor",
+        "revision" : "9a5e1c7952bb1869c7090c2150861cc16a46bc23"
+      }
+    }
+  ],
+  "version" : 2
+}
