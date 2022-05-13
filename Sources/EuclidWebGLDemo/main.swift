@@ -31,7 +31,7 @@ let fragmentShaderSource =
 
   void main() {
     // Just set the output to a constant redish-purple
-    outColor = vec4(1, 0, 0.5, 1);
+    outColor = vec4(0, 0.5, 0, 1);
   }
   """
 
@@ -110,17 +110,24 @@ func runWebGLDemo() {
   // Create a buffer and put three 2d clip space points in it
   let positionBuffer = context.createBuffer()
 
-  let polygon = Polygon([
-    .init([0.0, 0.0, 0.0])!,
-    .init([0.0, 0.5, 0.0])!,
-    .init([0.7, 0.0, 0.0])!,
-  ])!
+  let mesh = Mesh([
+    Polygon([
+      .init([0.0, 0.0, 0.0])!,
+      .init([0.0, 0.5, 0.0])!,
+      .init([0.5, 0.0, 0.0])!,
+    ])!,
+    Polygon([
+      .init([0.5, 0.0, 0.0])!,
+      .init([0.5, 0.5, 0.0])!,
+      .init([0.0, 0.5, 0.0])!,
+    ])!,
+  ])
 
   // Bind it to ARRAY_BUFFER (think of it as ARRAY_BUFFER = positionBuffer)
   context.bindBuffer(target: WebGL2RenderingContext.ARRAY_BUFFER, buffer: positionBuffer)
   context.bufferData(
     target: WebGL2RenderingContext.ARRAY_BUFFER,
-    srcData: polygon.verticesBuffer,
+    srcData: mesh.verticesBuffer,
     usage: WebGL2RenderingContext.STATIC_DRAW
   )
 
@@ -161,7 +168,7 @@ func runWebGLDemo() {
   context.bindVertexArray(array: vao)
 
   // draw
-  context.drawArrays(mode: WebGL2RenderingContext.TRIANGLES, first: 0, count: 3)
+  context.drawArrays(mode: WebGL2RenderingContext.TRIANGLES, first: 0, count: Int32(mesh.polygons.count * 3))
 }
 
 runWebGLDemo()

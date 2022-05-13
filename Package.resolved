@@ -24,7 +24,7 @@
       "location" : "https://github.com/swiftwasm/WebAPIKit.git",
       "state" : {
         "branch" : "maxd/optional-constructor",
-        "revision" : "9a5e1c7952bb1869c7090c2150861cc16a46bc23"
+        "revision" : "ccb3373a00562c40b6c79aa4a16b5ace40072a73"
       }
     }
   ],
