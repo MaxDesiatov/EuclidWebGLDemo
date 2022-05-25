@@ -30,7 +30,7 @@ let fragmentShaderSource =
   out vec4 outColor;
 
   void main() {
-    // Just set the output to a constant redish-purple
+    // Just set the output to a constant
     outColor = vec4(0, 0.5, 0, 1);
   }
   """

@@ -6,7 +6,7 @@ let package = Package(
         .executable(name: "EuclidWebGLDemo", targets: ["EuclidWebGLDemo"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/swiftwasm/WebAPIKit.git", branch: "maxd/optional-constructor"),
+        .package(url: "https://github.com/swiftwasm/WebAPIKit.git", branch: "main"),
         .package(url: "https://github.com/nicklockwood/Euclid.git", branch: "develop"),
     ],
     targets: [

@@ -10,6 +10,7 @@ extension Mesh {
     result.reserveCapacity(polygons.count * 3 * 3)
 
     for polygon in polygons {
+      precondition(polygon.vertices.count == 3)
       for vertex in polygon.vertices {
         result.append(Float32(vertex.position.x))
         result.append(Float32(vertex.position.y))
@@ -17,6 +18,6 @@ extension Mesh {
       }
     }
 
-    return BufferSource.arrayBuffer(Float32Array(result).buffer)
+    return .arrayBuffer(Float32Array(result).buffer)
   }
 }

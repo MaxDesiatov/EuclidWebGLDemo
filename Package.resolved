@@ -14,8 +14,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swiftwasm/JavaScriptKit.git",
       "state" : {
-        "branch" : "maxd/optional-constructor",
-        "revision" : "11c6898f855ce91044c26d28baf0089ecf2698d8"
+        "revision" : "2d7bc960eed438dce7355710ece43fa004bbb3ac",
+        "version" : "0.15.0"
       }
     },
     {
@@ -23,8 +23,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/swiftwasm/WebAPIKit.git",
       "state" : {
-        "branch" : "maxd/optional-constructor",
-        "revision" : "ccb3373a00562c40b6c79aa4a16b5ace40072a73"
+        "branch" : "main",
+        "revision" : "78ca09cd99c367803a6cf793f231912ad707c45e"
       }
     }
   ],
