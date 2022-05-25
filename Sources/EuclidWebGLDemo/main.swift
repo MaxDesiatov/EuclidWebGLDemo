@@ -78,10 +78,13 @@ extension WebGL2RenderingContext {
 
 extension HTMLCanvasElement {
   func resizeToDisplaySize() {
-    if width != UInt32(clientWidth) || height != UInt32(clientHeight) {
-      width = UInt32(clientWidth)
-      height = UInt32(clientHeight)
-    }
+    let clientWidth = UInt32(clientWidth)
+    let clientHeight = UInt32(clientHeight)
+
+    guard width != clientWidth || height != clientHeight else { return }
+
+    width = clientWidth
+    height = clientHeight
   }
 }
 
